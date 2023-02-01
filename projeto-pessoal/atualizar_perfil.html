@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><i class="bi bi-list"></i></li>
+                <li><i class="bi bi-card-image"></i></li>
+                <li><i class="bi bi-caret-down-fill"></i></li>
+                <li><p>Hoje</p></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>EDITAR PERFIL</h1>
+
+            <form action="">
+                <div>
+                    <label for="">IMAGEM DE PERFIL</label>
+                    <input type="file">
+
+                    <label for="">NOME</label>
+                    <input type="text">
+
+                    <label for="">ALTURA (cm)</label>
+                    <input type="number">
+
+                    <label for="objetivo">OBJETIVO</label>
+                    <select name="objetivo" id="objetivo">
+                        <option value="select">Selecione uma opção</option>
+                        <option value="perder">Perder Peso</option>
+                        <option value="manter">Manter Peso</option>
+                        <option value="ganhar">Ganhar Peso</option>
+                    </select>
+
+                    <label for="">NÍVEL DE TREINO</label>
+                    <input type="radio" name="treino" value="leve"/>Leve
+                    <input type="radio" name="treino" value="intermediario"/>Intermediário
+                    <input type="radio" name="treino" value="avancado"/>Avançado
+
+                    <button>ATUALIZAR PERFIL</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href=""><i class="bi bi-egg-fried"></i> <p>DIETA</p></i></a></li>
+            <li><a href=""><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></i></a></li>
+            <li><a href=""><i class="bi bi-person-fill"></i> <p>PERFIL</p></i></a></li>
+            <li><a href=""><i class="bi bi-cart"></i> <p>LOJA</p></i></a></li>
+        </ul>                
+    </footer>
+</body>
+</html>
