@@ -25,29 +25,19 @@
 
             <form action="">
                 <div>
-                    <label for="">IMAGEM DE PERFIL</label>
-                    <input type="file">
+                    <label for="">TIPO DE REFEIÇÃO</label>
+                    <input type="radio" name="refeicao" value="comum"/>Comum
+                    <input type="radio" name="refeicao" value="preTreino"/>Pré-treino
+                    <input type="radio" name="refeicao" value="posTreino"/>Pós-treino
 
                     <label for="">NOME</label>
                     <input type="text">
 
-                    <label for="">ALTURA (cm)</label>
-                    <input type="number">
+                    <label for="">HORÁRIO</label>
+                    <input type="time">
 
-                    <label for="objetivo">OBJETIVO</label>
-                    <select name="objetivo" id="objetivo">
-                        <option value="select">Selecione uma opção</option>
-                        <option value="perder">Perder Peso</option>
-                        <option value="manter">Manter Peso</option>
-                        <option value="ganhar">Ganhar Peso</option>
-                    </select>
-
-                    <label for="">NÍVEL DE TREINO</label>
-                    <input type="radio" name="treino" value="leve"/>Leve
-                    <input type="radio" name="treino" value="intermediario"/>Intermediário
-                    <input type="radio" name="treino" value="avancado"/>Avançado
-
-                    <button>SALVAR PERFIL</button>
+                    <button>SALVAR REFEIÇÃO</button>
+                    <button>ADICIONAR ALIMENTO</button>
                 </div>
             </form>
         </section>

@@ -25,29 +25,35 @@
 
             <form action="">
                 <div>
-                    <label for="">IMAGEM DE PERFIL</label>
-                    <input type="file">
-
                     <label for="">NOME</label>
                     <input type="text">
 
-                    <label for="">ALTURA (cm)</label>
-                    <input type="number">
-
-                    <label for="objetivo">OBJETIVO</label>
-                    <select name="objetivo" id="objetivo">
+                    <label for="porcao">UNIDADE DA PORÇÃO</label>
+                    <select name="porcao" id="porcao">
                         <option value="select">Selecione uma opção</option>
-                        <option value="perder">Perder Peso</option>
-                        <option value="manter">Manter Peso</option>
-                        <option value="ganhar">Ganhar Peso</option>
+                        <option value="gramas">gramas (g)</option>
+                        <option value="mililitros">mililitros (ml)</option>
                     </select>
 
-                    <label for="">NÍVEL DE TREINO</label>
-                    <input type="radio" name="treino" value="leve"/>Leve
-                    <input type="radio" name="treino" value="intermediario"/>Intermediário
-                    <input type="radio" name="treino" value="avancado"/>Avançado
+                    <label for="">QUANTIDADE DA PORÇÃO</label>
+                    <input type="number">
 
-                    <button>SALVAR PERFIL</button>
+                    <label for="">CARBOIDRATO POR PORÇÃO</label>
+                    <input type="number">
+
+                    <label for="">PROTEÍNA POR PORÇÃO</label>
+                    <input type="number">
+
+                    <label for="">GORDURA POR PORÇÃO</label>
+                    <input type="number">
+
+                    <label for="">CALORIAS (kcal) POR PORÇÃO</label>
+                    <input type="number">
+
+                    <label for="">PORÇÕES CONSUMIDAS</label>
+                    <input type="number">
+
+                    <button>SALVAR ALIMENTO</button>
                 </div>
             </form>
         </section>
