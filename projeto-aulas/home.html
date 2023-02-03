@@ -5,36 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-padrao.css" />
     <title>HOME</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-geo-alt-fill"></i></li>
-                <li><p>Londrina, PR</p></li>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul class="ul-menu">
+                <a href=""><li><i class="bi bi-person-circle"></i></li></a>
+                <li id="localizacao"><i class="bi bi-geo-alt-fill"></i><p class="nome-localizacao">Londrina, PR</p></li>
                 <li><i class="bi bi-card-image"></i></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>NOME DA EMPRESA</h1>
-        <h2>Olá, seja bem-vindo!</h2>
-        <h3>Vamos fazer seu pedido?</h3>
-
-        <section>
-            <i class="bi bi-search"></i>
-            <input type="text" placeholder="Digite seu pedido aqui!">
+        <section id="apresentacao">
+            <h1 id="nome-empresa">NOME DA EMPRESA</h1>
+            <h2 class="saudacao">Olá, seja bem-vindo!</h2>
+            <h3 class="saudacao">Vamos fazer seu pedido?</h3>
         </section>
 
-        <section>
-            <ul>
-                <li><a href="">Categoria 1</a></li>
-                <li><a href="">Categoria 2</a></li>
-                <li><a href="">Categoria 3</a></li>
-                <li><a href="">Categoria 4</a></li>
+        <section id="pesquisa-pedido">
+            <i class="bi bi-search"></i>
+            <input id="input-pedido" type="text" placeholder="Digite seu pedido aqui!">
+        </section>
+
+        <section id="categorias">
+            <ul id="lista-categorias">
+                <a href="" class="ancora-categoria"><li class="categoria">Categoria 1</li></a>
+                <a href="" class="ancora-categoria"><li class="categoria">Categoria 2</li></a>
+                <a href="" class="ancora-categoria"><li class="categoria">Categoria 3</li></a>
+                <a href="" class="ancora-categoria"><li class="categoria">Categoria 4</li></a>
             </ul>
         </section>
 
@@ -71,12 +73,52 @@
             <span>Sua avaliação pode gerar cupons.</span>
         </section>
 
-        <footer>
-            <ul>
-                <li><a href=""><i class="bi bi-house"> <p>HOME</p></i></a></li>
-                <li><a href=""><i class="bi bi-emoji-smile-fill"></i> <p>PERFIL</p></i></a></li>
-                <li><a href=""><i class="bi bi-ticket"></i> <p>CUPONS</p></i></a></li>
-                <li><a href=""><i class="bi bi-star-fill"></i> <p>PEDIDOS</p></i></a></li>
+        <footer id="rodape" class="rodape">
+            <ul class="card-rodape">
+                <a href="home.html">
+                    <li class="item-rodape">
+                        <i class="bi bi-house"></i>
+                        <p class="nome-item-rodape">
+                            HOME
+                        </p>
+                    </li>
+                </a>
+
+                <a href="cadastro_usuario.html">
+                    <li class="item-rodape">
+                        <i class="bi bi-emoji-smile-fill"></i>
+                        <p class="nome-item-rodape">
+                            PERFIL
+                        </p>
+                    </li>
+                </a>
+
+                <a href="cadastro_produto.html">
+                    <li class="item-rodape">
+                        <i class="bi bi-upc-scan"></i>
+                        <p class="nome-item-rodape">
+                            NOVO PRODUTO
+                        </p>
+                    </li>
+                </a>
+
+                <a href="carrinho.html">
+                    <li class="item-rodape">
+                        <i class="bi bi-cart-fill"></i>
+                        <p class="nome-item-rodape">
+                            CARRINHO
+                        </p>
+                    </li>
+                </a>
+
+                <a href="produto.html">
+                    <li class="item-rodape">
+                        <i class="bi bi-bag-heart-fill"></i>
+                        <p class="nome-item-rodape">
+                            PRODUTO
+                        </p>
+                    </li>
+                </a>
             </ul>                
         </footer>
     </main>
