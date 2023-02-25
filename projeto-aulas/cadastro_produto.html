@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style-padrao.css" />
+    <link rel="stylesheet" href="./css/style-cadastros.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-geo-alt-fill"></i></li>
-                <li><p>Londrina, PR</p></li>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul class="ul-menu">
+                <a href=""><li><i class="bi bi-person-circle"></i></li></a>
+                <li id="localizacao"><i class="bi bi-geo-alt-fill"></i><p class="nome-localizacao">Londrina, PR</p></li>
                 <li><i class="bi bi-card-image"></i></li>
             </ul>
         </nav>
@@ -21,24 +22,34 @@
 
     <main>
         <section>
-            <h1>CADASTRO DE PRODUTO</h1>
+            <h1 id="titulo">CADASTRO DE PRODUTO</h1>
 
             <form action="">
-                <div>
-                    <label for="">NOME DO PRODUTO</label>
-                    <input type="text">
+                <div id="formulario">
+                    <div class="linha-form">
+                        <label for="" class="label">NOME DO PRODUTO</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="">DESCRIÇÃO DO PRODUTO</label>
-                    <input type="text">
+                    <div class="linha-form">
+                        <label for="" class="label">DESCRIÇÃO DO PRODUTO</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="">CATEGORIA</label>
-                    <input type="text">
+                    <div class="linha-form">
+                        <label for="" class="label">CATEGORIA</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="">PREÇO UNITÁRIO</label>
-                    <input type="text">
+                    <div class="linha-form">
+                        <label for="" class="label">PREÇO UNITÁRIO</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="">CÓDIGO DE BARRAS</label>
-                    <input type="text">
+                    <div class="linha-form">
+                        <label for="" class="label">CÓDIGO DE BARRAS</label>
+                        <input type="text" class="input">
+                    </div>
 
                     <button>CADASTRAR PRODUTO</button>
                 </div>
@@ -46,12 +57,52 @@
         </section>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href=""><i class="bi bi-house"> <p>HOME</p></i></a></li>
-            <li><a href=""><i class="bi bi-emoji-smile-fill"></i> <p>PERFIL</p></i></a></li>
-            <li><a href=""><i class="bi bi-ticket"></i> <p>CUPONS</p></i></a></li>
-            <li><a href=""><i class="bi bi-star-fill"></i> <p>PEDIDOS</p></i></a></li>
+    <footer id="rodape" class="rodape">
+        <ul class="card-rodape">
+            <a href="home.html">
+                <li class="item-rodape">
+                    <i class="bi bi-house"></i>
+                    <p class="nome-item-rodape">
+                        HOME
+                    </p>
+                </li>
+            </a>
+
+            <a href="cadastro_usuario.html">
+                <li class="item-rodape">
+                    <i class="bi bi-emoji-smile-fill"></i>
+                    <p class="nome-item-rodape">
+                        PERFIL
+                    </p>
+                </li>
+            </a>
+
+            <a href="cadastro_produto.html">
+                <li class="item-rodape">
+                    <i class="bi bi-upc-scan"></i>
+                    <p class="nome-item-rodape">
+                        NOVO PRODUTO
+                    </p>
+                </li>
+            </a>
+
+            <a href="carrinho.html">
+                <li class="item-rodape">
+                    <i class="bi bi-cart-fill"></i>
+                    <p class="nome-item-rodape">
+                        CARRINHO
+                    </p>
+                </li>
+            </a>
+
+            <a href="produto.html">
+                <li class="item-rodape">
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <p class="nome-item-rodape">
+                        PRODUTO
+                    </p>
+                </li>
+            </a>
         </ul>                
     </footer>
 </body>

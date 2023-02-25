@@ -1,0 +1,134 @@
+/* Estilização do main */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#top-section {
+    display: flex;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    font-size: 40px;
+    color: var(--cora-da-empresa);
+    background-color: var(--background-clean);
+}
+
+#lista-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+#img-prod {
+    width: 10%;
+}
+
+#nome-produto {
+    padding-right: 2rem;
+    padding-left: .5rem;
+    color: grey;
+    font-size: 20px;
+}
+
+.bi-dash-square {
+    padding-right: .5rem;
+    font-size: 25px;
+    color: var(--cora-da-empresa);
+}
+
+#qnt-item {
+    font-size: 20px;
+    color: grey;
+}
+
+.bi-plus-square {
+    padding-left: .5rem;
+    font-size: 25px;
+    color: var(--cora-da-empresa);
+}
+
+.bi-trash3 {
+    padding-left: 2rem;
+    font-size: 20px;
+    color: var(--cora-da-empresa);
+}
+
+#valor-item {
+    padding-left: 2rem;
+    font-size: 20px;
+    color: grey;
+    font-weight: 700;
+}
+
+#aplicar-cupom {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+#placeholder-cupom {
+    width: 30%;
+    padding-left: .3rem;
+}
+
+#button-aplicar {
+    margin-left: 1rem;
+    font-weight: 700;
+    color: grey;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+#button-aplicar:hover {
+    box-shadow: 10px 5px 5px grey;
+    color: white;
+    background-color: var(--cora-da-empresa)
+}
+
+#total {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.linhas-valores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totais {
+    color: grey;
+    font-size: 20px;
+}
+
+.precos-finais {
+    font-size: 20px;
+    color: grey;
+    font-weight: 700;
+}
+
+#pagamento {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    width: 50%;
+    margin: auto;
+    color: grey;
+    margin-top: 2rem;
+}
+
+#pagamento:hover {
+    box-shadow: 10px 5px 5px grey;
+    color: white;
+    background-color: var(--cora-da-empresa)
+}

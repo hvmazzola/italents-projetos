@@ -1,0 +1,60 @@
+/* Estilização do login */
+
+section#login {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h1#empresa {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: .5rem;
+    color: var(--cora-da-empresa);
+    background-color: var(--background-clean);
+}
+
+figure#imagem-login {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#imagem-login img {
+    width: 50%;
+}
+
+#login-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: .5rem;
+    color: var(--cora-da-empresa);
+}
+
+.label-login {
+    margin-right: .3rem;
+}
+
+.input-login {
+    border: 2mm ridge rgb(255, 197, 5);
+}
+
+#realizar-login {
+    font-weight: 700;
+    color: grey;
+}
+
+#realizar-login:hover {
+    box-shadow: 10px 5px 5px grey;
+    color: white;
+    background-color: var(--cora-da-empresa)
+}
