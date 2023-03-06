@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-refeicao.css" />
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-card-image"></i></li>
-                <li><i class="bi bi-caret-down-fill"></i></li>
-                <li><p>Hoje</p></li>
-            </ul>
-        </nav>
+    <header id="cabecalho">
+        <ul id="lista-cabecalho">
+            <li><i class="bi bi-list"></i></li>
+            <li id="ancora-home"><a href="./home.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
+        </ul>
     </header>
 
     <main>
@@ -24,31 +22,41 @@
             <h1>EDITAR PERFIL</h1>
 
             <form action="">
-                <div>
-                    <label for="">TIPO DE REFEIÇÃO</label>
-                    <input type="radio" name="refeicao" value="comum"/>Comum
-                    <input type="radio" name="refeicao" value="preTreino"/>Pré-treino
-                    <input type="radio" name="refeicao" value="posTreino"/>Pós-treino
+                <div id="form">
+                    <div>
+                        <label for="" class="labels">TIPO DE REFEIÇÃO</label>
+                        <div id="nivel-refeicao">
+                            <input type="radio" name="refeicao" value="comum"/><p>Comum</p>
+                            <input type="radio" name="refeicao" value="preTreino"/><p>Pré-treino</p>
+                            <input type="radio" name="refeicao" value="posTreino"/><p>Pós-treino</p>
+                        </div>
+                    </div>
 
-                    <label for="">NOME</label>
-                    <input type="text">
+                    <div>
+                        <label for="" class="labels">NOME</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="">HORÁRIO</label>
-                    <input type="time">
+                    <div>
+                        <label for="" class="labels">HORÁRIO</label>
+                        <input type="time" class="input">
+                    </div>
 
-                    <button>SALVAR REFEIÇÃO</button>
-                    <button>ADICIONAR ALIMENTO</button>
+                    <div id="buttons">
+                        <button>SALVAR REFEIÇÃO</button>
+                        <button>EXCLUIR REFEIÇÃO</button>
+                    </div>
                 </div>
             </form>
         </section>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href=""><i class="bi bi-egg-fried"></i> <p>DIETA</p></i></a></li>
-            <li><a href=""><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></i></a></li>
-            <li><a href=""><i class="bi bi-person-fill"></i> <p>PERFIL</p></i></a></li>
-            <li><a href=""><i class="bi bi-cart"></i> <p>LOJA</p></i></a></li>
+    <footer id="rodape">
+        <ul id="lista-rodape">
+            <li><a href="./home.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
+            <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
+            <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>
         </ul>                
     </footer>
 </body>

@@ -5,67 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-alimento.css" />
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><i class="bi bi-list"></i></li>
-                <li><i class="bi bi-card-image"></i></li>
-                <li><i class="bi bi-caret-down-fill"></i></li>
-                <li><p>Hoje</p></li>
-            </ul>
-        </nav>
+    <header id="cabecalho">
+        <ul id="lista-cabecalho">
+            <li><i class="bi bi-list"></i></li>
+            <li id="ancora-home"><a href="./home.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
+        </ul>
     </header>
 
-    <main>
+    <main id="alimento">
         <section>
             <h1>EDITAR PERFIL</h1>
 
             <form action="">
-                <div>
-                    <label for="">NOME</label>
-                    <input type="text">
+                <div id="form">
+                    <div>
+                        <label for="" class="labels">NOME</label>
+                        <input type="text" class="input">
+                    </div>
 
-                    <label for="porcao">UNIDADE DA PORÇÃO</label>
-                    <select name="porcao" id="porcao">
-                        <option value="select">Selecione uma opção</option>
-                        <option value="gramas">gramas (g)</option>
-                        <option value="mililitros">mililitros (ml)</option>
-                    </select>
+                    <div>
+                        <label for="porcao" class="labels">UNIDADE DA PORÇÃO</label>
+                        <select name="porcao" class="input">
+                            <option value="select">Selecione uma opção</option>
+                            <option value="gramas">gramas (g)</option>
+                            <option value="mililitros">mililitros (ml)</option>
+                        </select>
+                    </div>
 
-                    <label for="">QUANTIDADE DA PORÇÃO</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">QUANTIDADE DA PORÇÃO</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <label for="">CARBOIDRATO POR PORÇÃO</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">CARBOIDRATO (g) POR PORÇÃO</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <label for="">PROTEÍNA POR PORÇÃO</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">PROTEÍNA (g) POR PORÇÃO</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <label for="">GORDURA POR PORÇÃO</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">GORDURA (g) POR PORÇÃO</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <label for="">CALORIAS (kcal) POR PORÇÃO</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">CALORIAS (kcal) POR PORÇÃO</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <label for="">PORÇÕES CONSUMIDAS</label>
-                    <input type="number">
+                    <div>
+                        <label for="" class="labels">PORÇÕES (un) CONSUMIDAS</label>
+                        <input type="number" class="input">
+                    </div>
 
-                    <button>SALVAR ALIMENTO</button>
+                    <button id="salvar-alimento" onclick="">SALVAR ALIMENTO</button>
                 </div>
             </form>
         </section>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href=""><i class="bi bi-egg-fried"></i> <p>DIETA</p></i></a></li>
-            <li><a href=""><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></i></a></li>
-            <li><a href=""><i class="bi bi-person-fill"></i> <p>PERFIL</p></i></a></li>
-            <li><a href=""><i class="bi bi-cart"></i> <p>LOJA</p></i></a></li>
+    <footer id="rodape">
+        <ul id="lista-rodape">
+            <li><a href="./home.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
+            <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
+            <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>
         </ul>                
     </footer>
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
