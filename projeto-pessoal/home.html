@@ -21,27 +21,27 @@
         <section id="metas">
             <div id="meta-diaria">
                 <label for="meta-calorias">Meta Diária</label>
-                <progress id="meta-calorias" value="0" max="3350"></progress>
-                <span>0.00kcal / 3350kcal (faltam 3350kcal)</span>
+                <progress id="meta-calorias" value="2111" max="3350"></progress>
+                <span>2111kcal / 2850kcal (faltam 739kcal)</span>
             </div>
             
             <div id="metas-macros">
                 <div class="macro">
                     <label for="carb" class="carb-text" id="carboidrato">Carboidrato</label>
-                    <progress id="carb" value="0" max="427"></progress>
-                    <span class="carb-text" id="macro-carb">0.00g / 427g (faltam 420g)</span>
+                    <progress id="carb" value="125.12" max="427"></progress>
+                    <span class="carb-text" id="macro-carb">125.12g / 363g (faltam 238g)</span>
                 </div>
 
                 <div class="macro">
                     <label for="prot" class="prot-text" id="proteina">Proteína</label>
-                    <progress id="prot" value="0" max="226"></progress>
-                    <span class="prot-text" id="macro-prot">0.00g / 226g (faltam 226g)</span>
+                    <progress id="prot" value="228.38" max="226"></progress>
+                    <span class="prot-text" id="macro-prot">228.38g / 192g (passou 36g)</span>
                 </div>
 
                 <div class="macro">
                     <label for="fat" class="fat-text" id="gordura">Gordura</label>
-                    <progress id="fat" value="0" max="82"></progress>
-                    <span class="fat-text" id="macro-fat">0.00g / 82g (faltam 82g)</span>
+                    <progress id="fat" value="74.55" max="82"></progress>
+                    <span class="fat-text" id="macro-fat">74.55g / 70g (passou 5g)</span>
                 </div>
             </div>
         </section>
@@ -50,122 +50,141 @@
             <div id="agua">
                 <label for="progress-agua">Água</label>
                 <progress id="progress-agua" value="0" max="2000"></progress>
-                <span id="qnt-agua">0ml / 2000ml</span>
-                <button id="button-add-agua"><i class="bi bi-plus-circle"></i> Adicionar</button>
+                <span id="qnt-agua">1200ml / 2000ml</span>
+                <button id="button-add-agua" type="button"><i class="bi bi-plus-circle"></i> Adicionar</button>
+                <button id="button-limpar-agua" type="button"><i class="bi bi-x-circle"></i></i> Limpar</button>
             </div>
 
             <div id="refeicoes">
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
-
-                <div class="refeicao">
-                    <div class="food-info">
-                        <span>Café da Manhã</span>
-                        <span>08:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
-                    </div>
-                    <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
-                    </div>
-                </div>
-
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
-
-                <div class="refeicao">
-                    <div class="food-info">
-                        <span>Almoço</span>
-                        <span>12:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
-                    </div>
-                    <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
-                    </div>
-                </div>
-
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
-
-                <div class="refeicao">
-                    <div class="food-info">
-                        <span>Lanche da Tarde</span>
-                        <span>15:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
-                    </div>
-                    <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
-                    </div>
-                </div>
-
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+                <button class="add-refeicao" type="button" id="add-inicio" onClick="addRefeicao('add-inicio')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
                 
                 <div class="refeicao">
-                    <div class="food-info">
+                    <div class="food-info" id="cafe-manha">
+                        <span>Café da Manhã</span>
+                        <span>08:00</span>
+                        <span>453.70 kcal</span>
+                        <span class="carb-text">Carb: 44.48</span>
+                        <span class="prot-text">Prot: 26.62</span>
+                        <span class="fat-text">Fat: 20.20</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('cafe-manha')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
+                    </div>
+                    <div class="botoes-refeicao">
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
+                    </div>
+                </div>
+
+                <button class="add-refeicao" type="button" id="refeicao-1" onClick="addRefeicao('refeicao-1')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+
+                <div class="refeicao">
+                    <div class="food-info" id="almoco">
+                        <span>Almoço</span>
+                        <span>12:00</span>
+                        <span>439.69 kcal</span>
+                        <span class="carb-text">Carb: 18.50</span>
+                        <span class="prot-text">Prot: 57.46</span>
+                        <span class="fat-text">Fat: 12.57</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('almoco')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
+                    </div>
+                    <div class="botoes-refeicao">
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
+                    </div>
+                </div>
+
+                <button class="add-refeicao" type="button" id="refeicao-2" onClick="addRefeicao('refeicao-2')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+
+                <div class="refeicao">
+                    <div class="food-info" id="lanche-tarde">
+                        <span>Lanche da Tarde</span>
+                        <span>16:00</span>
+                        <span>311,46 kcal</span>
+                        <span class="carb-text">Carb: 17.33</span>
+                        <span class="prot-text">Prot: 28.60</span>
+                        <span class="fat-text">Fat: 12.90</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('lanche-tarde')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
+                    </div>
+                    <div class="botoes-refeicao">
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
+                    </div>
+                </div>
+
+                <button class="add-refeicao" type="button" id="refeicao-3" onClick="addRefeicao('refeicao-3')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+                
+                <div class="refeicao">
+                    <div class="food-info" id="pre-treino">
                         <span>Pré-treino</span>
                         <span>18:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
+                        <span>238.80 kcal</span>
+                        <span class="carb-text">Carb: 13.77</span>
+                        <span class="prot-text">Prot: 28.74</span>
+                        <span class="fat-text">Fat: 7.65</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('pre-treino')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
                     </div>
                     <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
                     </div>
                 </div>
 
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+                <button class="add-refeicao" type="button" id="refeicao-4" onClick="addRefeicao('refeicao-4')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
 
                 <div class="refeicao">
-                    <div class="food-info">
+                    <div class="food-info" id="janta">
                         <span>Jantar</span>
                         <span>20:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
+                        <span>439.69 kcal</span>
+                        <span class="carb-text">Carb: 18.50</span>
+                        <span class="prot-text">Prot: 57.46</span>
+                        <span class="fat-text">Fat: 12.57</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('janta')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
                     </div>
                     <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
                     </div>
                 </div>
 
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+                <button class="add-refeicao" type="button" id="refeicao-5" onClick="addRefeicao('refeicao-5')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
 
                 <div class="refeicao">
-                    <div class="food-info">
+                    <div class="food-info" id="ceia">
                         <span>Ceia</span>
                         <span>23:00</span>
-                        <span>0.00 kcal</span>
-                        <span class="carb-text">Carb: 0.00</span>
-                        <span class="prot-text">Prot: 0.00</span>
-                        <span class="fat-text">Fat: 0.00</span>
+                        <span>242.24 kcal</span>
+                        <span class="carb-text">Carb: 12.55</span>
+                        <span class="prot-text">Prot: 29.50</span>
+                        <span class="fat-text">Fat: 8.66</span>
+                        <div class="botao-estender">
+                            <button type="button" class="down" onClick="estenderRefeicao('ceia')"><i class="bi bi-caret-down-fill"></i></i></button>
+                        </div>
                     </div>
                     <div class="botoes-refeicao">
-                        <button class="add-alimento">Adicionar alimento</button>
-                        <button class="edit-refeicao">Editar refeição</button>
+                        <button class="add-alimento"><a href="./adicionar_alimento.html">Adicionar alimento</a></button>
+                        <button class="edit-refeicao"><a href="./adicionar_refeicao.html">Editar refeição</a></button>
                     </div>
                 </div>
 
-                <button class="add-refeicao"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
+                <button class="add-refeicao" type="button" id="refeicao-6" onClick="addRefeicao('refeicao-6')"><i class="bi bi-plus-circle"></i>Adicionar nova refeição</button>
             </div>
 
             <div id="exercicios">
                     <span>Exercícios</span>
                     <span>Calorias Queimadas: 0 kcal</span>
                 <div id="botoes-ex">
-                    <button id="add-ex">Adicionar exercício</button>
-                    <button id="edit-ex">Editar exercícios</button>
+                    <button id="add-ex"><a href="./adicionar_exercicio.html">Adicionar exercício</a></button>
+                    <button id="edit-ex" type="button">Limpar exercícios</button>
                 </div>
             </div>
         </section>
@@ -180,10 +199,6 @@
         </ul>                
     </footer>
 
-    <script src="./script.js">
-
-
-
-    </script>
+    <script src="./js/script-home.js"></script>
 </body>
 </html>
