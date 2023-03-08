@@ -1,22 +1,29 @@
 
 
 const salvarLogin = document.getElementById('salvar-login');
-const login = document.getElementById('login-main');
+const loginAlert = document.getElementById('login-main');
 
 
 salvarLogin.addEventListener("click", () => {
 
-    const aviso = document.createElement('div');       
-    aviso.setAttribute("class", "salvamentos");
-    
-    aviso.innerHTML = `
-    <p>DADOS CORRETOS! FAZENDO LOGIN...</p>
-    `;
+    let login = document.getElementById('input-login').value;
+    let senha = document.getElementById('input-senha').value;
 
-    login.appendChild(aviso);
+    if((login == '') | (senha == '')) {
+        alert('Login ou Senha estão vazios.')
+    } else {
+        const aviso = document.createElement('div');       
+        aviso.setAttribute("class", "salvamentos");
+        
+        aviso.innerHTML = `
+        <p>DADOS CORRETOS! FAZENDO LOGIN...</p>
+        `;
 
-    setTimeout(() => {
-       aviso.remove()
-       window.location.href = './home.html';
-    }, 1800);
+        loginAlert.appendChild(aviso);
+
+        setTimeout(() => {
+        aviso.remove()
+        window.location.href = './index.html';
+        }, 1800);
+    }
 })

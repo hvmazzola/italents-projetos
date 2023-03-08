@@ -205,3 +205,69 @@ button:hover {
 .bi-egg-fried:hover, .bi-lightning-charge-fill:hover, .bi-person-fill:hover, .bi-cart:hover {
     color: var(--cor-do-texto);
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    #lista-cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    #lista-cabecalho li {
+        display: flex;
+        width: 30%;
+    }
+
+    #ancora-home {
+        justify-content: center;
+        flex-grow: 2;
+    }
+    
+    #lista-cabecalho li a {
+        font-size: 16px;
+    }
+
+    #lista-cabecalho li input {
+        font-size: 10px;
+        width: 50px;
+    }
+
+    #lista-cabecalho li i {
+        width: 20%;
+        font-size: 30px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section h1{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    #form {
+        width: 90%;
+    }
+
+    #form div label {
+        font-weight: 200;
+        font-size: 14px;
+        margin-right: 1rem;
+    }
+
+    #salvar-alimento {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    #excluir-alimento {
+        font-weight: 700;
+        font-size: 14px;
+    }
+    
+}

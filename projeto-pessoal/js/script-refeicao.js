@@ -7,19 +7,27 @@ const excluirRefeicao = document.getElementById('excluir-refeicao');
 
 salvarRefeicao.addEventListener("click", () => {
 
-    const aviso = document.createElement('div');       
-    aviso.setAttribute("class", "salvamentos");
-    
-    aviso.innerHTML = `
-    <p>REFEIÇÃO SALVA COM SUCESSO!</p>
-    `;
+    let nome = document.getElementById('nome').value;
+    let horario = document.getElementById('horario').value;
 
-    refeicao.appendChild(aviso);
+    if((nome == '') | (horario == '')) {
+        alert('* Preencha todos os campos obrigatórios.')
+    } else {
 
-    setTimeout(() => {
-       aviso.remove()
-       window.location.href = './home.html';
-    }, 1800);
+        const aviso = document.createElement('div');       
+        aviso.setAttribute("class", "salvamentos");
+        
+        aviso.innerHTML = `
+        <p>REFEIÇÃO SALVA COM SUCESSO!</p>
+        `;
+
+        refeicao.appendChild(aviso);
+
+        setTimeout(() => {
+        aviso.remove()
+        window.location.href = './index.html';
+        }, 1800);
+    }
 })
 
 excluirRefeicao.addEventListener("click", () => {
@@ -35,6 +43,6 @@ excluirRefeicao.addEventListener("click", () => {
 
     setTimeout(() => {
        aviso.remove()
-       window.location.href = './home.html';
+       window.location.href = './index.html';
     }, 1800);
 })

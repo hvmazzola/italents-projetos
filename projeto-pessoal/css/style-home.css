@@ -68,6 +68,58 @@ body {
 
 /* Main */
 
+#home-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#motivacional {
+    display: flex;
+    margin-top: 80px;
+    align-self: center;
+    width: 70%;
+    justify-content: space-between;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: 10px;
+    color: var(--cor-do-texto);
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+#motivacional h1 {
+    font-weight: 200;
+    padding-left: 1rem;
+}
+
+#motivacional button {
+    padding: 5px 10px;
+    margin-right: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+#motivacional button:hover {
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-position: right center;
+    box-shadow: 0 0 20px #eee;
+}
+
+.bi-shuffle {
+    
+}
+
 a {
     text-decoration: none;
     color: var(--cor-do-texto);
@@ -94,7 +146,6 @@ a {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 80px;
     width: 70%;
     font-weight: 700;
     padding: .5rem;
@@ -362,7 +413,7 @@ button:hover {
     width: 40%;
 }
 
-#alimentos {
+.alimentos {
     background-color: var(--background-escuro);
     width: 100%;
     padding: 0 .5rem;
@@ -455,4 +506,173 @@ button:hover {
 
 .bi-egg-fried:hover, .bi-lightning-charge-fill:hover, .bi-person-fill:hover, .bi-cart:hover {
     color: var(--cor-do-texto);
+}
+
+/* media query */
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    #lista-cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    #lista-cabecalho li {
+        display: flex;
+        width: 30%;
+    }
+
+    #ancora-home {
+        justify-content: center;
+        flex-grow: 2;
+    }
+    
+    #lista-cabecalho li a {
+        font-size: 16px;
+    }
+
+    #lista-cabecalho li input {
+        font-size: 10px;
+        width: 50px;
+    }
+
+    #lista-cabecalho li i {
+        width: 20%;
+        font-size: 30px;
+    }
+
+    #motivacional {
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    #motivacional h1 {
+        display: none;
+    }
+
+    #advice {
+        padding-left: .5rem;
+        font-weight: 200;
+    }
+
+    #metas {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #meta-diaria {
+        width: 100%;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    #meta-diaria label{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .5rem;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    #meta-diaria span{
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+        font-size: 14px;
+        padding-right: .5rem;
+    }
+
+    #meta-calorias {
+        width: 45%;
+    }
+
+    #metas-macros {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .macro {
+        width: 100%;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    #carboidrato, #proteina, #gordura {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .5rem;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    #carb, #prot, #fat {
+        width: 45%;
+    }
+
+    #macro-carb, #macro-fat, #macro-prot{
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+        font-size: 14px;
+        padding-right: .5rem;
+    }
+
+    #agua {
+        width: 90%;
+        font-weight: 200;
+        font-size: 14px;
+    }
+    
+    #progress-agua {
+        margin: 0 .5rem;
+        height: 1rem;
+        padding: 0;
+    }
+
+    .add-refeicao {
+        width: 60%;
+    }
+
+    .add-refeicao i {
+        margin-right: .5rem;
+    }
+
+    .refeicao {
+        width: 90%;
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .food-info {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .alimentos {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .alimento {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #exercicios {
+        width: 90%;
+        font-weight: 200;
+    }
 }

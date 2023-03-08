@@ -12,7 +12,7 @@ listaRefeicoes = [cafeManha, almoco, lancheTarde, preTreino, janta, ceia];
 
 var cafeManhaEstendido = document.createElement('div')
 cafeManhaEstendido.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-cafe-manha" class="alimentos">
     <div class="alimento">
         <span>Ovo mexido</span>
         <span>200g</span>
@@ -45,7 +45,7 @@ cafeManhaEstendido.innerHTML = `
 
 var almocoEstendido = document.createElement('div')
 almocoEstendido.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-almoco" class="alimentos">
     <div class="alimento">
         <span>Peito de frango grelhado</span>
         <span>160g</span>
@@ -87,7 +87,7 @@ almocoEstendido.innerHTML = `
 
 var lancheTardeEstendido = document.createElement('div')
 lancheTardeEstendido.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-lanche-tarde" class="alimentos">
     <div class="alimento">
         <span>Farinha de tapioca</span>
         <span>20g</span>
@@ -129,7 +129,7 @@ lancheTardeEstendido.innerHTML = `
 
 var preTreinoEstendido = document.createElement('div')
 preTreinoEstendido.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-pre-treino" class="alimentos">
     <div class="alimento">
         <span>Pasta de amendoim</span>
         <span>15g</span>
@@ -162,7 +162,7 @@ preTreinoEstendido.innerHTML = `
 
 var jantarEstendido = document.createElement('div')
 jantarEstendido.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-janta" class="alimentos">
     <div class="alimento">
         <span>Peito de frango grelhado</span>
         <span>160g</span>
@@ -204,7 +204,7 @@ jantarEstendido.innerHTML = `
 
 var ceiaEstendida = document.createElement('div')
 ceiaEstendida.innerHTML = `
-<div id="alimentos">
+<div id="alimentos-ceia" class="alimentos">
     <div class="alimento">
         <span>Maracujá</span>
         <span>50g</span>
@@ -257,7 +257,7 @@ function estenderRefeicao(idRefeicao) {
 function retrairRefeicao(idRefeicao) {
     for (i=0; i < listaRefeicoes.length; i++) {
         if ((listaRefeicoes[i].id) == idRefeicao) {
-            const esconderAlimentos = document.getElementById("alimentos");
+            const esconderAlimentos = document.querySelector("#alimentos-"+listaRefeicoes[i].id);
             esconderAlimentos.remove();
             const botaoEstensao = listaRefeicoes[i].querySelector(".botao-estender");
             botaoEstensao.innerHTML = `
@@ -339,3 +339,18 @@ function addRefeicao(idBotao) {
     var refeicaoNova = document.getElementById('nova-refeicao'+listaRefeicoes.length+1)
     listaRefeicoes.push(refeicaoNova)
 }
+
+getAdvice()
+
+async function getAdvice(){
+    let resposta = await fetch("https://api.adviceslip.com/advice");
+
+    const data = await resposta.json();
+
+document.getElementById('advice').innerHTML = `
+"${data.slip.advice}"
+`;
+}
+
+// teste de localStorage
+console.log(localStorage.getItem("name"));

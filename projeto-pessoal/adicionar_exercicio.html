@@ -12,7 +12,7 @@
     <header id="cabecalho">
         <ul id="lista-cabecalho">
             <li><i class="bi bi-list"></i></li>
-            <li id="ancora-home"><a href="./home.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="ancora-home"><a href="./index.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
             <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
         </ul>
     </header>
@@ -24,22 +24,23 @@
             <form action="">
                 <div id="form">
                     <div>
-                        <label for="" class="labels">NOME DO EXERCÍCIO</label>
-                        <input type="text" class="input">
+                        <label for="" class="labels">NOME DO EXERCÍCIO *</label>
+                        <input type="text" class="input" id="nome">
                     </div>
 
                     <div>
-                        <label for="" class="labels">TEMPO (min)</label>
-                        <input type="number" class="input">
+                        <label for="" class="labels">TEMPO (min) *</label>
+                        <input type="number" class="input" id="tempo">
                     </div>
 
                     <div>
-                        <label for="" class="labels">INTENSIDADE</label>
-                        <div id="nivel-ex">
-                            <input type="radio" name="treino" value="leve"/><p>Leve</p>
-                            <input type="radio" name="treino" value="intermediaria"/><p>Intermediária</p>
-                            <input type="radio" name="treino" value="avancada"/><p>Avançada</p>
-                        </div>
+                        <label for="" class="labels">INTENSIDADE *</label>
+                        <select name="treino" class="input" id="nivel-ex">
+                            <option value="">Seleciona uma opção</option>
+                            <option value="leve">Leve</option>
+                            <option value="moderada">Moderada</option>
+                            <option value="intensa">Intensa</option>
+                        </select>
                     </div>
 
                     <button type="button" id="salvar-exercicio">SALVAR EXERCÍCIO</button>
@@ -50,7 +51,7 @@
 
     <footer id="rodape">
         <ul id="lista-rodape">
-            <li><a href="./home.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./index.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
             <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
             <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
             <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>

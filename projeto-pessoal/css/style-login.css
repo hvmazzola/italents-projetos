@@ -150,3 +150,57 @@ button:hover {
     font-weight: 700;
     font-size: 20px;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    #lista-cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    #lista-cabecalho li {
+        display: flex;
+        width: 30%;
+    }
+
+    #ancora-home {
+        justify-content: center;
+        flex-grow: 2;
+    }
+    
+    #lista-cabecalho li a {
+        font-size: 16px;
+    }
+
+    #lista-cabecalho li input {
+        font-size: 10px;
+        width: 50px;
+    }
+
+    #lista-cabecalho li i {
+        width: 20%;
+        font-size: 30px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    #login-area {
+        width: 100%;
+    }
+
+    .inputs-login label{
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+    #salvar-login {
+        font-weight: 700;
+        font-size: 14px;
+    }
+    
+}

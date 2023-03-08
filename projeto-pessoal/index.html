@@ -12,36 +12,41 @@
     <header id="cabecalho">
         <ul id="lista-cabecalho">
             <li><i class="bi bi-list"></i></li>
-            <li id="ancora-home"><a href="./home.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="ancora-home"><a href="./index.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
             <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
         </ul>
     </header>
 
     <main id="home-main">
+        <section id="motivacional">
+            <h1>Motivacional: </h1>
+            <p id="advice"></p>
+            <button type="button" onClick="getAdvice()"><i class="bi bi-shuffle"></i></button>
+        </section>
         <section id="metas">
             <div id="meta-diaria">
                 <label for="meta-calorias">Meta Diária</label>
                 <progress id="meta-calorias" value="2111" max="3350"></progress>
-                <span>2111kcal / 2850kcal (faltam 739kcal)</span>
+                <span>2111kcal / 2850kcal</span>
             </div>
             
             <div id="metas-macros">
                 <div class="macro">
                     <label for="carb" class="carb-text" id="carboidrato">Carboidrato</label>
-                    <progress id="carb" value="125.12" max="427"></progress>
-                    <span class="carb-text" id="macro-carb">125.12g / 363g (faltam 238g)</span>
+                    <progress id="carb" value="125.12" max="363"></progress>
+                    <span class="carb-text" id="macro-carb">125.12g / 363g</span>
                 </div>
 
                 <div class="macro">
                     <label for="prot" class="prot-text" id="proteina">Proteína</label>
-                    <progress id="prot" value="228.38" max="226"></progress>
-                    <span class="prot-text" id="macro-prot">228.38g / 192g (passou 36g)</span>
+                    <progress id="prot" value="228.38" max="192"></progress>
+                    <span class="prot-text" id="macro-prot">228.38g / 192g</span>
                 </div>
 
                 <div class="macro">
                     <label for="fat" class="fat-text" id="gordura">Gordura</label>
-                    <progress id="fat" value="74.55" max="82"></progress>
-                    <span class="fat-text" id="macro-fat">74.55g / 70g (passou 5g)</span>
+                    <progress id="fat" value="74.55" max="70"></progress>
+                    <span class="fat-text" id="macro-fat">74.55g / 70g</span>
                 </div>
             </div>
         </section>
@@ -192,7 +197,7 @@
 
     <footer id="rodape">
         <ul id="lista-rodape">
-            <li><a href="./home.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./index.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
             <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
             <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
             <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>
