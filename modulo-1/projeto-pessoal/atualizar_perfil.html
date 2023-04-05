@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-perfil.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <ul id="lista-cabecalho">
+            <li><i class="bi bi-list"></i></li>
+            <li id="ancora-home"><a href="./index.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
+        </ul>
+    </header>
+
+    <main id="perfil">
+        <section>
+            <h1>EDITAR PERFIL</h1>
+
+            <form action="">
+                <div id="form">
+                    <div>
+                        <label for="" class="labels">IMAGEM DE PERFIL</label>
+                        <input type="file">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">NOME *</label>
+                        <input type="text" class="input" id="nome">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">ALTURA (cm)  *</label>
+                        <input type="number" class="input" id="altura">
+                    </div>
+
+                    <div>
+                        <label for="objetivo" class="labels">OBJETIVO  *</label>
+                        <select name="objetivo" class="input" id="objetivo">
+                            <option value="">Selecione uma opção</option>
+                            <option value="perder">Perder Peso</option>
+                            <option value="manter">Manter Peso</option>
+                            <option value="ganhar">Ganhar Peso</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">NÍVEL DE TREINO  *</label>
+                        <select name="treino" class="input" id="nivel-treino">
+                            <option value="">Selecione uma opção</option>
+                            <option value="leve">Leve</option>
+                            <option value="moderado">Moderado</option>
+                            <option value="pesado">Pesado</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="salvar-perfil">SALVAR PERFIL</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <ul id="lista-rodape">
+            <li><a href="./index.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
+            <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
+            <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>
+        </ul>                
+    </footer>
+
+    <script src="./js/script-perfil.js"></script>
+
+</body>
+</html>

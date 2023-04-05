@@ -1,0 +1,93 @@
+/* Estilização do login */
+
+section#voltar-favoritar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    color: var(--cora-da-empresa);
+    background-color: var(--background-clean);
+}
+
+i.bi-chevron-double-left {
+    font-size: 40px;
+}
+
+i.bi-heart-fill {
+    font-size: 40px;
+    color: red;
+}
+
+section#descricao-produto {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    padding: 0 7rem;
+    color: grey;
+}
+
+.cabecalho-produto {
+    display: flex;
+    justify-content: center;
+}
+
+#adicionar-produto {
+    display: flex;
+    flex-direction: column;
+}
+
+#contador-produto {
+    display: flex;
+    font-size: 30px;
+    margin: auto;
+}
+
+i.bi-dash-square {
+    margin-right: 2rem;
+    color: var(--cora-da-empresa);
+}
+
+i.bi-plus-square {
+    margin-left: 2rem;
+    color: var(--cora-da-empresa);
+}
+
+#qnt-produto {
+    color: grey;
+}
+
+#foto-produto {
+    width: 30%;
+    align-self: center;
+}
+
+#precos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.preco {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.label-preco {
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+#adicionar-ao-carrinho {
+    font-weight: 700;
+    width: 50%;
+    margin: auto;
+    color: grey;
+    margin-top: 2rem;
+}
+
+#adicionar-ao-carrinho:hover {
+    box-shadow: 10px 5px 5px grey;
+    color: white;
+    background-color: var(--cora-da-empresa)
+}

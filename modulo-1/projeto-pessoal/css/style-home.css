@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-escuro);
+}
+
+:root {
+    --background-escuro: rgb(24, 24, 24);
+    --cor-do-texto: rgb(236, 236, 236);
+    --cor-divs: rgb(90, 90, 90);
+}
+
+/* Estilizacao do cabeçalho */
+
+#cabecalho {
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: var(--cor-divs);
+    box-shadow: 0px 5px 20px 5px black;
+}
+
+#lista-cabecalho {
+    display: flex;
+    background-color: var(--cor-divs);
+    list-style: none;
+    color: var(--cor-do-texto);
+    font-size: 35px;
+    justify-content: space-between;
+}
+
+#lista-cabecalho li {
+    display: flex;
+    width: 33%;
+}
+
+#ancora-home {
+    justify-content: center;
+}
+
+#titulo-cabecalho {
+    text-decoration: none;
+    color: var(--cor-do-texto);
+}
+
+.bi-list {
+    padding-left: 1rem;
+}
+
+#li-data {
+    padding-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#data {
+    padding: 0 0.5rem;
+}
+
+/* Main */
+
+#home-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#motivacional {
+    display: flex;
+    margin-top: 80px;
+    align-self: center;
+    width: 70%;
+    justify-content: space-between;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: 10px;
+    color: var(--cor-do-texto);
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+#motivacional h1 {
+    font-weight: 200;
+    padding-left: 1rem;
+}
+
+#motivacional button {
+    padding: 5px 10px;
+    margin-right: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+#motivacional button:hover {
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-position: right center;
+    box-shadow: 0 0 20px #eee;
+}
+
+.bi-shuffle {
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-do-texto);
+}
+
+.salvamentos {
+    position: fixed;
+    bottom: 120px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-do-texto);
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#metas {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    font-weight: 700;
+    padding: .5rem;
+    background-color: var(--cor-divs);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+}
+
+#meta-diaria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1rem;
+    color: var(--cor-do-texto);
+    padding: 0 1rem;
+    width: 50%;
+}
+
+#meta-calorias {
+    margin: 0 .5rem;
+    height: 1.5rem;
+    width: 250px;
+    text-align: center;
+    display:block;
+    -webkit-appearance: none;
+}
+
+#meta-calorias::-webkit-progress-bar {
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+#meta-calorias::-moz-progress-bar {  
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#meta-calorias::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+
+#metas-macros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cor-do-texto);
+    padding: 1rem 1rem;
+    width: 50%;
+}
+
+.macro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#carb, #fat, #prot{
+    height: 1rem;
+    width: 40%;
+    margin: 0 .5rem;
+    -webkit-appearance: none;
+}
+
+#carb::-webkit-progress-bar, #fat::-webkit-progress-bar, #prot::-webkit-progress-bar {
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#carb::-moz-progress-bar, #fat::-moz-progress-bar, #prot::-moz-progress-bar {  
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#fat::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #631a72;
+    background-image: linear-gradient(43deg, #631a72 0%, #C850C0 46%, #ec87e6 100%);
+}
+
+#prot::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+}
+
+#carb::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+}
+
+#carboidrato {
+    width: 20%;
+}
+
+#proteina {
+    width: 20%;
+}
+
+#gordura {
+    width: 20%;
+}
+
+#macro-carb {
+    width: 40%;
+}
+
+#macro-prot {
+    width: 40%;
+}
+
+#macro-fat {
+    width: 40%;
+}
+
+.carb-text {
+    color: aquamarine;
+}
+
+.prot-text {
+    color: coral;
+}
+
+.fat-text {
+    color: rgb(182, 21, 182);
+}
+
+#agua {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: var(--cor-divs);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+    color: var(--cor-do-texto);
+    width: 70%;
+    font-weight: 700;
+    padding: .5rem;
+}
+
+#progress-agua {
+    margin: 0 .5rem;
+    height: 1.5rem;
+    width: 400px;
+    text-align: center;
+    padding-right: 1rem;
+    -webkit-appearance: none;
+}
+
+#progress-agua::-webkit-progress-bar {
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+#progress-agua::-moz-progress-bar {  
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#progress-agua::-webkit-progress-value {
+    border-radius: 50px;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+
+#qnt-agua {
+    padding-right: 1rem;
+}
+
+button {
+    border-radius: 5px;
+    border-width: 0px;
+    padding: .2rem;
+    margin: .4rem .4rem;
+    background-color: gray;
+    color: var(--cor-do-texto);
+}
+
+button:hover {
+    box-shadow: 3px 3px 5px black;
+    background-color: var(--background-escuro);
+}
+
+.alimento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.alimento span {
+    width: 15%;
+}
+
+.down {
+    background-color: var(--cor-divs);
+    font-size: 20px;
+}
+
+.down:hover {
+    box-shadow: 3px 3px 5px var(--cor-divs);
+    background-color: var(--cor-divs);
+}
+
+#refeicoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cor-do-texto);
+    padding-top: 3rem;
+    margin: auto;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.refeicao {
+    background-color: var(--cor-divs);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    width: 70%;
+    flex-direction: column;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.food-info span {
+    width: 16%;
+}
+
+.botoes-refeicao {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+}
+
+.add-alimento {
+    width: 40%;
+}
+
+.edit-refeicao {
+    width: 40%;
+}
+
+.alimentos {
+    background-color: var(--background-escuro);
+    width: 100%;
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+#exercicios {
+    background-color: var(--cor-divs);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cor-do-texto);
+    margin-bottom: 110px;
+}
+
+#botoes-ex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-refeicao {
+    display: flex;
+    margin: auto;
+    height: 25px;
+    width: 30%;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--cor-divs);
+    padding: .2rem;
+}
+
+.add-refeicao:hover {
+    box-shadow: 3px 3px 5px black;
+    background-color: var(--cor-do-texto);
+    color: var(--background-escuro)
+}
+
+.add-refeicao i {
+    width: 10%;
+}
+
+/* Estilizacao do rodapé */
+
+#rodape {
+    width: 100%;
+    background-color: var(--cor-divs);
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    color: var(--cor-do-texto);
+    box-shadow: 0px -5px 20px 5px black;
+}
+
+#lista-rodape {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.item-rodape {
+    display: flex;
+    text-decoration: none;
+    color: var(--background-escuro);
+    flex-direction: column;
+    align-items: center;
+}
+
+.bi-egg-fried, .bi-lightning-charge-fill, .bi-person-fill, .bi-cart {
+    font-size: 35px;
+    margin-bottom: -.5rem;
+}
+
+.bi-egg-fried:hover, .bi-lightning-charge-fill:hover, .bi-person-fill:hover, .bi-cart:hover {
+    color: var(--cor-do-texto);
+}
+
+/* media query */
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    #lista-cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    #lista-cabecalho li {
+        display: flex;
+        width: 30%;
+    }
+
+    #ancora-home {
+        justify-content: center;
+        flex-grow: 2;
+    }
+    
+    #lista-cabecalho li a {
+        font-size: 16px;
+    }
+
+    #lista-cabecalho li input {
+        font-size: 10px;
+        width: 50px;
+    }
+
+    #lista-cabecalho li i {
+        width: 20%;
+        font-size: 30px;
+    }
+
+    #motivacional {
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    #motivacional h1 {
+        display: none;
+    }
+
+    #advice {
+        padding-left: .5rem;
+        font-weight: 200;
+    }
+
+    #metas {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #meta-diaria {
+        width: 100%;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    #meta-diaria label{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .5rem;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    #meta-diaria span{
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+        font-size: 14px;
+        padding-right: .5rem;
+    }
+
+    #meta-calorias {
+        width: 45%;
+    }
+
+    #metas-macros {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .macro {
+        width: 100%;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    #carboidrato, #proteina, #gordura {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .5rem;
+        width: 20%;
+        font-size: 14px;
+    }
+
+    #carb, #prot, #fat {
+        width: 45%;
+    }
+
+    #macro-carb, #macro-fat, #macro-prot{
+        display: flex;
+        justify-content: flex-end;
+        width: 30%;
+        font-size: 14px;
+        padding-right: .5rem;
+    }
+
+    #agua {
+        width: 90%;
+        font-weight: 200;
+        font-size: 14px;
+    }
+    
+    #progress-agua {
+        margin: 0 .5rem;
+        height: 1rem;
+        padding: 0;
+    }
+
+    .add-refeicao {
+        width: 60%;
+    }
+
+    .add-refeicao i {
+        margin-right: .5rem;
+    }
+
+    .refeicao {
+        width: 90%;
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .food-info {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .alimentos {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .alimento {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #exercicios {
+        width: 90%;
+        font-weight: 200;
+    }
+}

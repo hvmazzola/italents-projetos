@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-login.css" />
+    <title>Document</title>
+</head>
+    <body>
+        <header id="cabecalho">
+            <ul id="lista-cabecalho">
+                <li><i class="bi bi-list"></i></li>
+                <li id="ancora-home"><a href="./index.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+                <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
+            </ul>
+        </header>
+
+        <main id="login-main">
+            <section id="login">
+
+                <i class="bi bi-card-image"></i>
+
+                <div id="login-area">
+                    <div class="inputs-login">
+                        <label for="">LOGIN</label>
+                        <input type="text" id="input-login">
+                    </div>
+
+                    <div class="inputs-login">
+                        <label for="">SENHA</label>
+                        <input type="password" id="input-senha">
+                    </div>
+
+                    <button type="button" id="salvar-login">LOGIN</button>
+                </div>
+            </section>
+        </main>
+
+        <script src="./js/script-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* Estilização do main */
+#titulo {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: var(--background-clean);
+    color: var(--cora-da-empresa);
+    font-weight: 700;
+    padding: 1rem;
+    font-size: 40px;
+}
+
+
+form {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 50%;
+}
+
+.linha-form {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.7rem;
+    align-items: baseline;
+}
+
+.label {
+    color: var(--cora-da-empresa);
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+.input {
+    font-size: 15px;
+    border: 2mm ridge rgb(255, 197, 5);
+    width: 70%;
+}
+
+#radio-input {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+#sim-nao {
+    display: flex;
+    width: 70%;
+}
+
+.label-sim-nao {
+    color: grey;
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+.sim-nao {
+    display: flex;
+    margin: .5rem;
+}
+
+button {
+    font-weight: 700;
+    color: grey;
+    margin-top: 2rem;
+    width: 50%;
+    align-self: center;
+}
+
+button:hover {
+    box-shadow: 10px 5px 5px grey;
+    color: white;
+    background-color: var(--cora-da-empresa)
+}

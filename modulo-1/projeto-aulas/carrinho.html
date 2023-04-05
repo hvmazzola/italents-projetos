@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style-padrao.css" />
+    <link rel="stylesheet" href="./css/style-carrinho.css" />
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul class="ul-menu">
+                <a href=""><li><i class="bi bi-person-circle"></i></li></a>
+                <li id="localizacao"><i class="bi bi-geo-alt-fill"></i><p class="nome-localizacao">Londrina, PR</p></li>
+                <li><i class="bi bi-card-image"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="top-section">
+            <i class="bi bi-chevron-double-left"></i>
+            <span>CARRINHO</span>
+            <i class="bi bi-cart2"></i>
+        </section>
+
+        <section id="lista-produtos">
+            <img id="img-prod" src="https://cdn.icon-icons.com/icons2/510/PNG/512/images_icon-icons.com_50365.png" alt="Imagem do produto">
+            <p id="nome-produto">NOME DO PRODUTO</p>
+            <i class="bi bi-dash-square"></i>
+            <span id="qnt-item">1</span>
+            <i class="bi bi-plus-square"></i>
+            <p id="valor-item">R$ 00000,00</p>
+            <i class="bi bi-trash3"></i>
+        </section>
+
+        <section id="aplicar-cupom">
+            <input type="text" placeholder="Digite seu código de desconto..." id="placeholder-cupom">
+            <button id="button-aplicar">APLICAR</button>
+        </section>
+
+        <section>
+            <div id="total">
+                <div class="linhas-valores">
+                    <p class="totais">VALOR DELIVERY</p>
+                    <p class="precos-finais">R$ 00000,00</p>
+                </div>
+                <div class="linhas-valores">
+                    <p class="totais">TOTAL DO PEDIDO</p>
+                    <p class="precos-finais">R$ 00000,00</p>
+                </div>
+            </div>
+
+            <button id="pagamento">IR PARA PAGAMENTO</button>
+        </section>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <ul class="card-rodape">
+            <a href="home.html">
+                <li class="item-rodape">
+                    <i class="bi bi-house"></i>
+                    <p class="nome-item-rodape">
+                        HOME
+                    </p>
+                </li>
+            </a>
+
+            <a href="cadastro_usuario.html">
+                <li class="item-rodape">
+                    <i class="bi bi-emoji-smile-fill"></i>
+                    <p class="nome-item-rodape">
+                        PERFIL
+                    </p>
+                </li>
+            </a>
+
+            <a href="cadastro_produto.html">
+                <li class="item-rodape">
+                    <i class="bi bi-upc-scan"></i>
+                    <p class="nome-item-rodape">
+                        NOVO PRODUTO
+                    </p>
+                </li>
+            </a>
+
+            <a href="carrinho.html">
+                <li class="item-rodape">
+                    <i class="bi bi-cart-fill"></i>
+                    <p class="nome-item-rodape">
+                        CARRINHO
+                    </p>
+                </li>
+            </a>
+
+            <a href="produto.html">
+                <li class="item-rodape">
+                    <i class="bi bi-bag-heart-fill"></i>
+                    <p class="nome-item-rodape">
+                        PRODUTO
+                    </p>
+                </li>
+            </a>
+        </ul>                
+    </footer>         
+    </footer>
+</body>
+</html>

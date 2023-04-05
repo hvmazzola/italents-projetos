@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style-alimento.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <ul id="lista-cabecalho">
+            <li><i class="bi bi-list"></i></li>
+            <li id="ancora-home"><a href="./index.html" id="titulo-cabecalho">NOME DA EMPRESA</a></li>
+            <li id="li-data"><input placeholder="Hoje" class="textbox-n" type="text" onfocus="(this.type='date')" id="data"></li>
+        </ul>
+    </header>
+
+    <main id="alimento">
+        <section>
+            <h1>EDITAR ALIMENTO</h1>
+
+            <form action="">
+                <div id="form">
+                    <div>
+                        <label for="" class="labels">NOME *</label>
+                        <input type="text" class="input" id="nome">
+                    </div>
+
+                    <div>
+                        <label for="porcao" class="labels">UNIDADE DA PORÇÃO *</label>
+                        <select name="porcao" class="input" id="un-porcao">
+                            <option value="select">Selecione uma opção</option>
+                            <option value="gramas">gramas (g)</option>
+                            <option value="mililitros">mililitros (ml)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">QUANTIDADE DA PORÇÃO *</label>
+                        <input type="number" class="input" id="qnt-porcao">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">CARBOIDRATO (g) POR PORÇÃO</label>
+                        <input type="number" class="input" value="0">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">PROTEÍNA (g) POR PORÇÃO</label>
+                        <input type="number" class="input" value="0">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">GORDURA (g) POR PORÇÃO</label>
+                        <input type="number" class="input" value="0">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">CALORIAS (kcal) POR PORÇÃO</label>
+                        <input type="number" class="input" value="0">
+                    </div>
+
+                    <div>
+                        <label for="" class="labels">PORÇÕES (un) CONSUMIDAS *</label>
+                        <input type="number" class="input" id="porcao-consumida">
+                    </div>
+
+                    <div id="buttons">
+                        <button id="salvar-alimento" type="button">SALVAR ALIMENTO</button>
+                        <button id="excluir-alimento" type="button">EXCLUIR ALIMENTO</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <ul id="lista-rodape">
+            <li><a href="./index.html" class="item-rodape"><i class="bi bi-egg-fried"></i> <p>DIETA</p></a></li>
+            <li><a href="./adicionar_exercicio.html" class="item-rodape"><i class="bi bi-lightning-charge-fill"></i> <p>TREINO</p></a></li>
+            <li><a href="./atualizar_perfil.html" class="item-rodape"><i class="bi bi-person-fill"></i> <p>PERFIL</p></a></li>
+            <li><a href="https://www.gsuplementos.com.br/" class="item-rodape"><i class="bi bi-cart"></i> <p>LOJA</p></a></li>
+        </ul>                
+    </footer>
+
+    <script src="./js/script-alimento.js"></script>
+
+</body>
+</html>
