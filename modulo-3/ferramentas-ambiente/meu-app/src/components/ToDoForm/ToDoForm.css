@@ -1,0 +1,25 @@
+.to-do-form {
+    margin: 10px 0px;
+}
+
+.to-do-form label {
+    display: block;
+    font-size: 14px;
+    color: #2d3436;
+}
+
+.to-do-form input {
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+}
+
+.to-do-form button {
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    background: #2ed573;
+    border-radius: 10px;
+    margin-left: 5px;
+}
