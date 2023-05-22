@@ -1,0 +1,55 @@
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+.date {
+  margin: auto;
+  width: 600px;
+  padding: 10px 0px;
+  display: flex;
+}
+
+.date label {
+  padding-right: 10px;
+}
+
+.date select {
+  flex-grow: 2;
+}
+
+.name {
+  margin: auto;
+  width: 600px;
+  padding: 10px 0px;
+  display: flex;
+}
+
+.name label {
+  padding-right: 10px;
+}
+
+.name input {
+  flex-grow: 2;
+}
+
+.form button {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #72edbc 0%, #28b52d 100%);
+  background-origin: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.form button:hover {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(16, 140, 66, 0.25), 0px 0px 0px 3.5px rgba(58, 217, 151, 0.5);
+  outline: 0;
+}
+

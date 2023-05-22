@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>APERTE F5 PARA REPETIR!</h1>
+    <script>
+    let numero = prompt("Digite um número inteiro entre 1 e 365: ");
+
+    if (numero < 1) {
+        alert("ERRO: O número digitado é menor que 0. Atualize a página e tente novamente.");
+    } else if (numero > 365) {
+        alert("ERRO: O número digitado é maior que 365. Atualize a página e tente novamente.");
+    } else {
+        if (numero <= 31) {
+            alert(numero + " de janeiro de 2023")
+        } else if (31 < numero && numero <= 59) {
+            numero = numero - 31;
+            alert(numero + " de fevereiro de 2023")
+        } else if (59 < numero && numero <= 90) {
+            numero = numero - 59;
+            alert(numero + " de março de 2023")
+        } else if (90 < numero && numero <= 120) {
+            numero = numero - 90;
+            alert(numero + " de abril de 2023")
+        } else if (120 < numero && numero <= 151) {
+            numero = numero - 118;
+            alert(numero + " de maio de 2023")
+        } else if (151 < numero && numero <= 181) {
+            numero = numero - 151;
+            alert(numero + " de junho de 2023")
+        } else if (181 < numero && numero <= 212) {
+            numero = numero - 181;
+            alert(numero + " de julho de 2023")
+        } else if (212 < numero && numero <= 243) {
+            numero = numero - 212;
+            alert(numero + " de agosto de 2023")
+        } else if (243 < numero && numero <= 273) {
+            numero = numero - 243;
+            alert(numero + " de setembro de 2023")
+        } else if (273 < numero && numero <= 304) {
+            numero = numero - 273;
+            alert(numero + " de outubro de 2023")
+        } else if (304 < numero && numero <= 334) {
+            numero = numero - 304;
+            alert(numero + " de novembro de 2023")
+        } else {
+            numero = numero - 334;
+            alert(numero + " de dezembro de 2023")
+        };    
+    };
+    </script>    
+</body>
+</html>
