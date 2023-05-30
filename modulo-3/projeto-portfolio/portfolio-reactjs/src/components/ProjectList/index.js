@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import Projeto from '../Projeto';
+import Project from '../Project'
+import projectsMock from '../../mock/projects'
 
 const ProjectList = () => {
 
   const [categoriaClick, setCategoriaClick] = useState('Todos');
+
+  const [projects, setProjects] = useState(projectsMock);
 
   return (
     <section className='my-12 max-width-screen-xl mx-auto px-3'>
@@ -19,12 +22,9 @@ const ProjectList = () => {
         </div>
         {/* Lista de Projetos */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
-          <Projeto/>
-          <Projeto/>
-          <Projeto/>
-          <Projeto/>
-          <Projeto/>
-          <Projeto/>
+          {projects.map(project => (
+            <Project key={project._id} project={project} />
+          ))}
         </div>
     </section>
   )

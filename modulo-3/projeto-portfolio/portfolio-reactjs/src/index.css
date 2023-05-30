@@ -33,3 +33,11 @@ body {
     background-color: #028090;
     height: 400px;
 }
+
+.banner {
+    background-color: #028090;
+}
+
+.text-primary {
+    color: #02C39A;
+}
