@@ -6,14 +6,14 @@ const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
 
-  const { userLogged, loading, login, logout } = useAuth()
+  const { userLogged, loading, login, logout, userFull } = useAuth()
 
   if(loading) {
     return <h1>Carregando...</h1>
   }
 
   return (
-    <AuthContext.Provider value={{ userLogged, login, logout }}>
+    <AuthContext.Provider value={{ userLogged, login, logout, userFull }}>
       { children }
     </AuthContext.Provider>
   )
