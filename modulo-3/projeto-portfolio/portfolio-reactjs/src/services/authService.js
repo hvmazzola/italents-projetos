@@ -13,7 +13,7 @@ const registerApi = ( userValues ) => {
 }
 
 const getUserById = ( idUser ) => {
-  api.get(`/usuario/findById/${idUser}`)
+  return api.get(`/usuario/findById/${idUser}`)
   .then((response) => response)
   .catch((err) => console.error('Erro: ', err))
 }

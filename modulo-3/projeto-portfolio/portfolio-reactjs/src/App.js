@@ -10,6 +10,8 @@ import Register from './pages/Register';
 import Admin from './pages/Admin';
 import AddProject from './pages/AddProject';
 import NotFound from './pages/NotFound';
+import EditProduct from './pages/EditProject';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
   return (
@@ -25,9 +27,19 @@ function App() {
             <Admin/>
           </ProtectedRoute>
         }/>
-        <Route path='/add-project' element={
+        <Route path='/project/:id' element={
+          <ProtectedRoute>
+            <ProjectDetail/>
+          </ProtectedRoute>
+        }/>
+        <Route path='/admin/add-project' element={
           <ProtectedRoute>
             <AddProject/>
+          </ProtectedRoute>
+        }/>
+        <Route path='/admin/edit-project/:id' element={
+          <ProtectedRoute>
+            <EditProduct/>
           </ProtectedRoute>
         }/>
         <Route path='/curriculo' element={

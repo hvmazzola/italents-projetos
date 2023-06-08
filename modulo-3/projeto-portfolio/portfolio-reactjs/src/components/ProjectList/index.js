@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Project from '../Project'
-import projectsMock from '../../mock/projects'
+import { findAllProjects } from '../../services/projectService';
 
 const ProjectList = () => {
 
   const [categoriaClick, setCategoriaClick] = useState('Todos');
 
-  const [projects, setProjects] = useState(projectsMock);
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    getAllProjects()
+  }, [])
+
+  const getAllProjects = async () => {
+    const response = await findAllProjects()
+    setProjects(response.data)
+  }
 
   return (
     <section className='my-12 max-width-screen-xl mx-auto px-3'>

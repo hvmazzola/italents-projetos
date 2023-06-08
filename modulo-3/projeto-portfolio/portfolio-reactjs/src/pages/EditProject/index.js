@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import findAllFerramentas from '../../services/ferramentaService'
 import { MultiSelect } from "react-multi-select-component"
-import { addProjectApi } from '../../services/projectService'
+import { findProjectById, updateProjectById } from '../../services/projectService'
 import { useNavigate } from 'react-router-dom'
 
-const AddProject = () => {
+const EditProduct = () => {
+  const { id } = useParams()
+
+  const navigate = useNavigate()
 
   const [projectForm, setProjectForm] = useState({
+    _id: "",
     nome: "",
     linguagem: "",
     descricao: "",
@@ -14,7 +19,14 @@ const AddProject = () => {
     ferramentas: [{ _id: "" }]
   })
 
-  const navigate = useNavigate()
+  const [ferramentas, setFerramentas] = useState([])
+
+  const [selected, setSelected] = useState([])
+
+  const getProjectById = async () => {
+    const response = await findProjectById(id)
+    setProjectForm(response.data)
+  }
 
   const handleChangeValues = (event) => {
     setProjectForm({
@@ -26,28 +38,12 @@ const AddProject = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const ferramentasAdd = selected.map(ferramenta => {
-      return {
-        _id: ferramenta.value,
-        nome: ferramenta.label
-      }
-    })
-    const project = {
-      ...projectForm,
-      ferramentas: ferramentasAdd
-    }
-    console.log(project)
-    const response = await addProjectApi(project)
-
-    if(response.data){
-      alert(`Projeto ${response.data.nome} cadastrado com sucesso!`)
+    const response = await updateProjectById(id, projectForm)
+    if(response) {
+      alert(`Projeto ${response.data.nome} editado com sucesso!`)
       navigate('/admin')
     }
   }
-
-  const [ferramentas, setFerramentas] = useState([])
-
-  const [selected, setSelected] = useState([])
 
   const getFerramentas = async () => {
     const response = await findAllFerramentas()
@@ -62,12 +58,13 @@ const AddProject = () => {
 
   useEffect(() => {
     getFerramentas()
+    getProjectById()
   }, [])
 
   return (
     <section className='my-12 max-w-screen-xl mx-auto px-6'>
       <div className='flex flex-col space-y-2'>
-        <h1 className='text-2xl text-gray-600'>Cadastro de Projeto</h1>
+        <h1 className='text-2xl text-gray-600'>Edição de Projetos</h1>
       </div>
       <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 mt-6'>
         <div className='flex flex-col space-y-2'>
@@ -77,6 +74,7 @@ const AddProject = () => {
             type="text"
             id='imagem'
             name='imagem'
+            value={projectForm.imagem}
             required
             onChange={handleChangeValues}
             className='w-full px-4 py-3 rounded-lg ring-red-200 border-gray-300 focus:ring-4 focus:outline-none transition duration-300 focus:shadow-xl'
@@ -87,6 +85,7 @@ const AddProject = () => {
             type="text"
             id='nome'
             name='nome'
+            value={projectForm.nome}
             required
             onChange={handleChangeValues}
             className='w-full px-4 py-3 rounded-lg ring-red-200 border-gray-300 focus:ring-4 focus:outline-none transition duration-300 focus:shadow-xl'
@@ -98,6 +97,7 @@ const AddProject = () => {
             id="descricao"
             cols="30"
             rows="10"
+            value={projectForm.descricao}
             required
             onChange={handleChangeValues}
             className='w-full px-4 py-3 rounded-lg ring-red-200 border-gray-300 focus:ring-4 focus:outline-none transition duration-300 focus:shadow-xl'
@@ -110,6 +110,7 @@ const AddProject = () => {
             type="text"
             id='linguagem'
             name='linguagem'
+            value={projectForm.linguagem}
             required
             onChange={handleChangeValues}
             className='w-full px-4 py-3 rounded-lg ring-red-200 border-gray-300 focus:ring-4 focus:outline-none transition duration-300 focus:shadow-xl'
@@ -122,7 +123,7 @@ const AddProject = () => {
             labelledBy="Select"
           />
           <div className='mt-8'>
-            <button type='submit' className='w-full px-3 bg-primary text-white focus:outline-none focus:ring-4 mt-6 rounded-lg transition duration-300'>Adicionar</button>
+            <button type='submit' className='w-full px-3 bg-primary text-white focus:outline-none focus:ring-4 mt-6 rounded-lg transition duration-300'>Salvar Edição</button>
           </div>
         </div>
       </form>
@@ -130,4 +131,4 @@ const AddProject = () => {
   )
 }
 
-export default AddProject
+export default EditProduct

@@ -11,6 +11,7 @@ const useAuth = () => {
 
   const findUserById = async ( idUser ) => {
     const response = await getUserById(idUser)
+    console.log(response)
     setUserFull(response.data)
   }
 
@@ -39,7 +40,7 @@ const useAuth = () => {
     navigate('/login')
   }
 
-  return { userLogged, loading, login, logout, userFull, findUserById }
+  return { userLogged, loading, login, logout, userFull }
 }
 
 export default useAuth
