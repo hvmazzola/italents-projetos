@@ -15,7 +15,7 @@ const registerApi = ( userValues ) => {
 const getUserById = ( idUser ) => {
   return api.get(`/usuario/findById/${idUser}`)
   .then((response) => response)
-  .catch((err) => console.error('Erro: ', err))
+  .catch((err) => console.log(err.response.data))
 }
 
 export { loginApi, registerApi, getUserById }

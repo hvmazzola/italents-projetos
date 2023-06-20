@@ -14,6 +14,7 @@ const ProjectList = () => {
 
   const getAllProjects = async () => {
     const response = await findAllProjects()
+    console.log(response)
     setProjects(response.data)
   }
 

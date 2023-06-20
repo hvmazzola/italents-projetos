@@ -30,13 +30,14 @@ const useAuth = () => {
     const data = await response.data
     localStorage.setItem('userInfo', JSON.stringify(data))
     api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
-    navigate('/')
     setUserLogged(true)
+    navigate('/')
   }
 
   const logout = () => {
     setUserLogged(false)
     localStorage.clear()
+    setUserFull({})
     navigate('/login')
   }
 

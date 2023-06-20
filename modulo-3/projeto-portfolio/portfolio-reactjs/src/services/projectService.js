@@ -3,13 +3,13 @@ import api from "./api";
 const addProjectApi = ( project ) => {
   return api.post('/project/create', project)
   .then((response) => response)
-  .catch((err) => err)
+  .catch((err) => console.log(err.response.data))
 }
 
 const findAllProjects = () => {
   return api.get('/project/findAll')
   .then((response) => response)
-  .catch((err) => err)
+  .catch((err) => console.log(err.response.data))
 }
 
 const findProjectById = (id) => {
